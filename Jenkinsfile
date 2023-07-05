@@ -2,19 +2,6 @@ pipeline {
 	agent any
 
 	stages {
-		#stage('Build Artifact') {
-		#	steps{
-		#		sh "mvn clean package "
-		#		archive 'target/*.war'
-		#	}
-
-		#}	
-		#stage('Unit Tests') {
-		#	steps{
-		#		sh "mvn test"
-		#	}
-
-		#}
 
 		stage('Docker Build and Push') {
 	      steps {
