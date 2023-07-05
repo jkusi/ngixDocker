@@ -25,7 +25,7 @@ spec:
 kind: Service
 apiVersion: v1
 metadata:
-  name: animalPhoto
+  name: animalphoto
 spec:
   selector:
     app: animal
