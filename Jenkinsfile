@@ -7,8 +7,8 @@ pipeline {
 	      steps {
 	        withDockerRegistry([credentialsId: "docker-hub", url: ""]) {
 	          sh 'printenv'
-	          sh 'docker build -t carmichaelc09/animal-photo:v1 .'
-	          sh 'docker push carmichaelc09/animal-photo:v1'
+	          sh 'docker build -t carmichaelc09/project1:v1 .'
+	          sh 'docker push carmichaelc09/project1:v1'
 	        }
 	      }
 	    }
