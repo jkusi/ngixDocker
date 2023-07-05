@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: animal
-        image: carmichaelc09/AnimalPhoto:v2
+        image: carmichaelc09/AnimalPhoto:v1
         ports:
         - containerPort: 80
 ---
