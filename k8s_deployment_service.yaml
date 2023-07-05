@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: animalphoto
+  labels:
+    app: animal
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: animal
+  template:
+    metadata:
+      name: animalphoto
+      labels:
+        app: animal
+    spec:
+      containers:
+      - name: animal
+        image: carmichaelc09/AnimalPhoto:v2
+        ports:
+        - containerPort: 80
+---
+#creating a service for this deployment
+kind: Service
+apiVersion: v1
+metadata:
+  name: animalPhoto
+spec:
+  selector:
+    app: animal
+  type: NodePort
+  ports:
+  - port: 80
+    targetPort: 80
+    #nodePort: 31000
