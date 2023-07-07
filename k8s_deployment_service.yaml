@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: animal
-        image: nginx
+        image: carmichaelc09/project1
         ports:
         - containerPort: 80
 ---
